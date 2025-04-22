@@ -45,6 +45,19 @@ Visit [http://localhost:3000](http://localhost:3000) to see your trace viewer in
 
 The project uses the following structure for its data:
 
+## Screenshots and Videos
+
+Create the following directories: 
+
+```bash
+mkdir -p public public/screenshots public/videos 
+```
+
+Place your screenshots and videos in the following directories:
+
+- `public/screenshots/`: Contains the screenshots
+- `public/videos/`: Contains the videos   
+
 ### JSON Data Files
 
 The trace data is stored in JSON files under `src/data/` directory:
