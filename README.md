@@ -26,8 +26,8 @@ Follow these steps to set up and run the Computer Use Agent Trace Viewer from sc
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/cua-trace-viewer.git
-cd cua-trace-viewer
+git clone https://github.com/Computer-use-agents/CUA-Trace-Viewer.git
+cd CUA-Trace-Viewer
 ```
 
 Alternatively, create a new project directory and initialize from scratch:
