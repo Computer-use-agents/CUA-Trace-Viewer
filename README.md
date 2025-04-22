@@ -2,7 +2,7 @@
 
 A web-based visualization tool for Computer Use Agent traces, displaying the agent's thought process, actions, screenshots, and corresponding videos.
 
-![Computer Use Agent Trace Viewer](https://i.imgur.com/example.png)
+![Computer Use Agent Trace Viewer](figure/page.png)
 
 ## 📋 Features
 
