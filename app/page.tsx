@@ -73,7 +73,7 @@ export default function Home() {
               ? "bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-violet-500" 
               : "bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
           }`}>
-            Computer Use Agent - macOS Agent
+          MacOS Agent: an efficient Computer Use Agent for MacOS
           </h1>
           <p className={`text-xl font-light ${
             darkMode ? "text-blue-100 opacity-80" : "text-blue-700 opacity-90"
@@ -483,26 +483,32 @@ export default function Home() {
             
             <div className={`prose max-w-none ${darkMode ? "prose-invert" : ""}`}>
               <p className={`leading-relaxed ${darkMode ? "text-gray-300" : "text-gray-700"}`}>
-                The architecture consists of three hierarchical levels:
+                MacOS Agent is a hierarchical multi-agent system with three key components:
               </p>
               <ul className={`${darkMode ? "text-gray-300" : "text-gray-700"} space-y-2 list-disc pl-6 mt-2`}>
                 <li>
-                  <span className="font-medium">User Level:</span> The human user interacts with the Computer Use Agent, providing high-level instructions and goals.
+                  <span className={`${darkMode ? "text-blue-300" : "text-blue-600"} font-medium`}>ComputerUse Agent:</span> The top-level agent that interfaces with human users. It receives natural language instructions and generates high-level execution plans, which are then forwarded to the MacAgent. This agent operates at an abstract level without direct access to application controls.
                 </li>
                 <li>
-                  <span className="font-medium">OS Level:</span> Platform-specific agents (currently <span className={`${darkMode ? "text-blue-300" : "text-blue-600"} font-medium`}>MacAgent</span> is fully implemented, with <span className={`${darkMode ? "text-yellow-300" : "text-yellow-600"} font-medium`}>iOSAgent</span> in development) interpret user goals and coordinate app-level agents.
-                </li>
-                <li>
-                  <span className="font-medium">App Level:</span> MacAgent currently supports 10 specialized app agents organized by category:
+                  <span className={`${darkMode ? "text-blue-300" : "text-blue-600"} font-medium`}>MacAgent:</span> The central coordinator that receives plans from the ComputerUse Agent. It analyzes these plans and determines the optimal execution strategy by:
                   <ul className="ml-6 space-y-1 mt-2">
-                    <li><span className="font-medium">Productivity Suite:</span> Word, Excel, PowerPoint, TextEdit</li>
-                    <li><span className="font-medium">System:</span> Finder</li>
-                    <li><span className="font-medium">Media & Communication:</span> Preview, Player (QuickTime), Browser, WeChat, Calendar</li>
+                    <li>Identifying which app agents are needed</li>
+                    <li>Generating executable code to orchestrate these agents</li>
+                    <li>Managing the reactive workflow between different app agents</li>
+                  </ul>
+                </li>
+                <li>
+                  <span className={`${darkMode ? "text-blue-300" : "text-blue-600"} font-medium`}>App Agents:</span> A collection of nine specialized agents that directly interface with macOS applications:
+                  <ul className="ml-6 space-y-1 mt-2">
+                    <li><span className="font-medium">Document Processing:</span> Word Agent, TextEdit Agent</li>
+                    <li><span className="font-medium">Data & Presentations:</span> Excel Agent, PowerPoint Agent</li>
+                    <li><span className="font-medium">System & Navigation:</span> Finder Agent, Browser Agent</li>
+                    <li><span className="font-medium">Media & Communication:</span> Preview Agent, QuickTime Agent, WeChat Agent, Calendar Agent</li>
                   </ul>
                 </li>
               </ul>
               <p className={`mt-4 leading-relaxed ${darkMode ? "text-gray-300" : "text-gray-700"}`}>
-                This modular approach enables complex cross-application workflows while maintaining specialized knowledge at each level. The system architecture promotes extensibility and flexibility, allowing for easy integration of new application agents.
+                This architecture enables sophisticated task execution through coordinated agent interactions. The MacAgent's ability to dynamically orchestrate app agents allows for complex workflows while maintaining clear separation of concerns between planning and execution.
               </p>
             </div>
           </div>
