@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import TraceViewer from '../src/components/TraceViewer';
 import trace1Data from '../src/data/trace1.json';
 import trace2Data from '../src/data/trace2.json';
+import trace3Data from '../src/data/trace3.json';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -170,11 +171,13 @@ export default function Home() {
             }`}>
               <div>
                 <h2 className={`text-xl font-medium ${darkMode ? "text-gray-100" : "text-gray-800"}`}>Agent Activity Trace</h2>
-                <p className={`text-sm ${darkMode ? "text-gray-400" : "text-gray-500"}`}>Session 1: Document Navigation Analysis</p>
+                <p className={`text-sm ${darkMode ? "text-gray-400" : "text-gray-500"}`}>
+                  Involoved apps: browser, word, calendar.
+                  </p>
               </div>
               <div className="flex items-center">
                 <div className="h-2 w-2 rounded-full bg-green-500 mr-2 animate-pulse"></div>
-                <span className={`text-xs ${darkMode ? "text-green-400" : "text-green-600"}`}>Live Monitoring</span>
+                <span className={`text-xs ${darkMode ? "text-green-400" : "text-green-600"}`}>Trace Monitoring</span>
               </div>
             </div>
             <div className={`h-[75vh] overflow-hidden rounded-b-2xl border-x border-b ${
@@ -195,11 +198,13 @@ export default function Home() {
             }`}>
               <div>
                 <h2 className={`text-xl font-medium ${darkMode ? "text-gray-100" : "text-gray-800"}`}>Agent Activity Trace</h2>
-                <p className={`text-sm ${darkMode ? "text-gray-400" : "text-gray-500"}`}>Session 2: Content Search Pattern Analysis</p>
+                <p className={`text-sm ${darkMode ? "text-gray-400" : "text-gray-500"}`}>
+                  Involoved apps: browser, textedit, calendar.
+                </p>
               </div>
               <div className="flex items-center">
                 <div className="h-2 w-2 rounded-full bg-green-500 mr-2 animate-pulse"></div>
-                <span className={`text-xs ${darkMode ? "text-green-400" : "text-green-600"}`}>Live Monitoring</span>
+                <span className={`text-xs ${darkMode ? "text-green-400" : "text-green-600"}`}>Trace Monitoring</span>
               </div>
             </div>
             <div className={`h-[75vh] overflow-hidden rounded-b-2xl border-x border-b ${
@@ -210,6 +215,32 @@ export default function Home() {
               <TraceViewer data={trace2Data} id="viewer2" />
             </div>
           </section>
+          <section>
+            <div className={`rounded-t-2xl p-4 flex justify-between items-center ${
+              darkMode 
+                ? "backdrop-blur-sm bg-white/5 border border-white/10" 
+                : "backdrop-blur-sm bg-blue-50/30 border border-blue-100/50"
+            }`}>
+              <div>
+                <h2 className={`text-xl font-medium ${darkMode ? "text-gray-100" : "text-gray-800"}`}>Agent Activity Trace</h2>
+                <p className={`text-sm ${darkMode ? "text-gray-400" : "text-gray-500"}`}>
+                  Involoved apps: browser, textedit, calendar.
+                </p>
+              </div>
+              <div className="flex items-center">
+                <div className="h-2 w-2 rounded-full bg-green-500 mr-2 animate-pulse"></div>
+                <span className={`text-xs ${darkMode ? "text-green-400" : "text-green-600"}`}>Trace Monitoring</span>
+              </div>
+            </div>
+            <div className={`h-[75vh] overflow-hidden rounded-b-2xl border-x border-b ${
+              darkMode 
+                ? "backdrop-blur-sm bg-black/30 border-white/10 shadow-2xl" 
+                : "backdrop-blur-sm bg-white/90 border-blue-100/50 shadow-lg"
+            }`}>
+              <TraceViewer data={trace3Data} id="viewer3" />
+            </div>
+          </section>
+        
         </div>
         
         <footer className={`mt-20 text-center text-sm ${darkMode ? "text-gray-500" : "text-gray-600"}`}>

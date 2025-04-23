@@ -50,7 +50,7 @@ The project uses the following structure for its data:
 Create the following directories: 
 
 ```bash
-mkdir -p public public/screenshots public/videos 
+mkdir -p public  public/screenshots public/videos 
 ```
 
 Place your screenshots and videos in the following directories:
