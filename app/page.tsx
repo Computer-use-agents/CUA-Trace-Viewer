@@ -98,22 +98,20 @@ export default function Home() {
                 ? "bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400" 
                 : "bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
             }`}>
-              Meet the Future of Desktop Automation
+              Meet the Automation of Computer Use
             </h2>
           </div>
           
           <div className={`prose max-w-none mb-8 ${darkMode ? "prose-invert" : ""}`}>
             <p className={`text-lg leading-relaxed mb-6 ${darkMode ? "text-gray-200" : "text-gray-700"}`}>
-              <span className="font-medium">Computer Use Agent</span> redefines how you interact with macOS through
-              <span className={`${
+            We build a <span className="font-medium">Computer Use Agent</span> that redefines how you interact with macOS. Now it can <span className={`${
                 darkMode 
                   ? "bg-gradient-to-r from-blue-900/60 to-purple-900/60" 
                   : "bg-gradient-to-r from-blue-100 to-purple-100"
                 } px-2 py-0.5 mx-1 rounded`}
               >
-                intelligent observation and execution
-              </span> 
-              of complex tasks across all your applications.
+                solve diverse and complex tasks
+              </span>  across commonly used applications.
             </p>
           </div>
             
@@ -125,7 +123,7 @@ export default function Home() {
             }`}>
               <div className={`${darkMode ? "text-blue-400" : "text-blue-600"} text-4xl mb-4 group-hover:scale-110 transition-transform duration-300`}>👁️</div>
               <h3 className={`font-medium text-lg mb-2 ${darkMode ? "text-blue-300" : "text-blue-700"}`}>Multimodal Understanding</h3>
-              <p className={`text-sm ${darkMode ? "text-blue-100/80" : "text-blue-900/80"}`}>Understand the task and your screen, and summarize what has been done and what needs to be done.</p>
+              <p className={`text-sm ${darkMode ? "text-blue-100/80" : "text-blue-900/80"}`}>Interprets screen content and task requirements to provide clear progress tracking and next steps.</p>
             </div>
               
             <div className={`rounded-xl p-6 shadow-lg transition-all duration-300 group ${
@@ -135,7 +133,7 @@ export default function Home() {
             }`}>
               <div className={`${darkMode ? "text-purple-400" : "text-purple-600"} text-4xl mb-4 group-hover:scale-110 transition-transform duration-300`}>🔄</div>
               <h3 className={`font-medium text-lg mb-2 ${darkMode ? "text-purple-300" : "text-purple-700"}`}>Long-horizon Reasoning</h3>
-              <p className={`text-sm ${darkMode ? "text-purple-100/80" : "text-purple-900/80"}`}>It can solve complex tasks that require many steps, performing human-like interactions with macOS.</p>
+              <p className={`text-sm ${darkMode ? "text-purple-100/80" : "text-purple-900/80"}`}>Executes multi-step tasks through natural interactions with the macOS interface.</p>
             </div>
               
             <div className={`rounded-xl p-6 shadow-lg transition-all duration-300 group ${
@@ -145,7 +143,7 @@ export default function Home() {
             }`}>
               <div className={`${darkMode ? "text-teal-400" : "text-teal-600"} text-4xl mb-4 group-hover:scale-110 transition-transform duration-300`}>🧠</div>
               <h3 className={`font-medium text-lg mb-2 ${darkMode ? "text-teal-300" : "text-teal-700"}`}>Cross-App Workflows</h3>
-              <p className={`text-sm ${darkMode ? "text-teal-100/80" : "text-teal-900/80"}`}>Navigates seamlessly between applications, orchestrating multi-step processes with remarkable adaptability to different applications.</p>
+              <p className={`text-sm ${darkMode ? "text-teal-100/80" : "text-teal-900/80"}`}>Coordinates tasks across different applications with consistent performance and reliability.</p>
             </div>
           </div>
             
