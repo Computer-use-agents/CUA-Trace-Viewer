@@ -2,9 +2,30 @@
 
 import React, { useState } from 'react';
 import TraceViewer from '../src/components/TraceViewer';
+import { TraceData } from '../src/types/trace';
 import trace1Data from '../src/data/trace1.json';
 import trace2Data from '../src/data/trace2.json';
 import trace3Data from '../src/data/trace3.json';
+
+// 获取basePath
+const basePath = process.env.NODE_ENV === 'production' ? '/CUA-Trace-Viewer' : '';
+
+// 修正图片和视频路径
+const fixAssetPaths = (data: TraceData): TraceData => {
+  return {
+    ...data,
+    items: data.items.map(item => ({
+      ...item,
+      screenshot: `${basePath}${item.screenshot.startsWith('/') ? '' : '/'}${item.screenshot}`,
+      video: `${basePath}${item.video.startsWith('/') ? '' : '/'}${item.video}`
+    }))
+  };
+};
+
+// 应用路径修正
+const processedTrace1 = fixAssetPaths(trace1Data as TraceData);
+const processedTrace2 = fixAssetPaths(trace2Data as TraceData);
+const processedTrace3 = fixAssetPaths(trace3Data as TraceData);
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -185,7 +206,7 @@ export default function Home() {
                 ? "backdrop-blur-sm bg-black/30 border-white/10 shadow-2xl" 
                 : "backdrop-blur-sm bg-white/90 border-blue-100/50 shadow-lg"
             }`}>
-              <TraceViewer data={trace1Data} id="viewer1" />
+              <TraceViewer data={processedTrace1} id="viewer1" />
             </div>
           </section>
           
@@ -212,7 +233,7 @@ export default function Home() {
                 ? "backdrop-blur-sm bg-black/30 border-white/10 shadow-2xl" 
                 : "backdrop-blur-sm bg-white/90 border-blue-100/50 shadow-lg"
             }`}>
-              <TraceViewer data={trace2Data} id="viewer2" />
+              <TraceViewer data={processedTrace2} id="viewer2" />
             </div>
           </section>
           <section>
@@ -237,7 +258,7 @@ export default function Home() {
                 ? "backdrop-blur-sm bg-black/30 border-white/10 shadow-2xl" 
                 : "backdrop-blur-sm bg-white/90 border-blue-100/50 shadow-lg"
             }`}>
-              <TraceViewer data={trace3Data} id="viewer3" />
+              <TraceViewer data={processedTrace3} id="viewer3" />
             </div>
           </section>
         
